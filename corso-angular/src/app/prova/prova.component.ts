@@ -7,14 +7,14 @@ import { Component } from '@angular/core';
 })
 export class ProvaComponent {
 
-  isDisabled = false
+  title = 'corso-angular'
 
-  onClick() {
-    console.log('ho cliccato!')
+  onClick(e: Event) {
+    this.title = 'ho cliccato!'
   }
 
   onInput(e: Event) {
-    console.log((<HTMLInputElement>e.target).value)
+    this.title = (<HTMLInputElement>e.target).value
   }
 
 }
