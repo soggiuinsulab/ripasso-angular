@@ -7,36 +7,12 @@ import { Component } from '@angular/core';
 })
 export class ProvaComponent {
 
-  constructor() {
-    console.log('costruttore')
-  }
-
-  ngOnInit() {
-    console.log('ngOnInit')
-  }
-
-  ngAfterContentChecked() {
-    console.log('ngAfterContentChecked')
-  }
-
-  ngAfterViewChecked() {
-    console.log('ngAfterViewChecked')
-  }
-
-  ngAfterContentInit() {
-    console.log('ngAfterContentInit')
-  }
-
-  ngAfterViewInit() {
-    console.log('ngAfterViewInit')
-  }
-
-  ngDoCheck() {
-    console.log('ngDoCheck')
-  }
-
-  ngOnDestroy() {
-    console.log('ngOnDestroy')
-  }
+  dogs = [
+    {
+      name: 'roger',
+      race: 'doge',
+      description: 'Roger is a Doge'
+    }
+  ]
 
 }
