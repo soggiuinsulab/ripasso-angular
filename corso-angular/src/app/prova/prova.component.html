@@ -1,6 +1,11 @@
-<button mat-raised-button color="primary" [disabled]='isDisabled'>
+<button mat-raised-button color="primary" [disabled]='isDisabled' (click)="onClick()">
     Primary
 </button>
+
+<mat-form-field class="example-full-width">
+    <mat-label>Favorite food</mat-label>
+    <input matInput placeholder="Ex. Pizza" (input)="onInput($event)">
+</mat-form-field>
 
 <mat-card class="example-card">
     <mat-card-header>
@@ -8,7 +13,6 @@
       <mat-card-title>Shiba Inu</mat-card-title>
       <mat-card-subtitle>Dog Breed</mat-card-subtitle>
     </mat-card-header>
-    <img mat-card-image [src]="renderedImage" alt="Photo of a Shiba Inu">
     <mat-card-content>
       <p>
         The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
