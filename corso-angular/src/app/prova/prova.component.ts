@@ -17,4 +17,6 @@ export class ProvaComponent {
     this.title = (<HTMLInputElement>e.target).value
   }
 
+  isVisible = true
+
 }

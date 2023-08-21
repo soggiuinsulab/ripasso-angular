@@ -7,6 +7,21 @@
     <input matInput placeholder="Ex. Pizza" [(ngModel)]="title">
 </mat-form-field>
 
-<p>
-    {{title}}
+<p *ngIf="isVisible">
+    Ciao, sono un paragrafo!
 </p>
+<p *ngIf="!isVisible">
+    Ciao, sono un paragrafo invisibile!
+</p>
+
+<ng-template *ngIf="isVisible; then ifBlock else elseBlock"></ng-template>
+<ng-template #ifBlock>
+    <p>
+        Sono visibile
+    </p>
+</ng-template>
+<ng-template #elseBlock>
+    <p>
+        Non sono visibile
+    </p>
+</ng-template>
