@@ -31,15 +31,8 @@
         <div class="circle" [ngClass]="{'online-circle online-circle-plus': person.isOnline, 'offline-circle': !person.isOnline}">
             i
         </div>
-        {{person.name}} {{person.surname}}
-    </li>
-</ul>
-Alternativa
-<ul>
-    <li *ngFor="let person of people; index as i">
-        <div class="circle" [ngClass]="person.isOnline ? 'online-circle online-circle-plus' : 'offline-circle'">
-            i
+        <div [ngStyle]="{color: person.color}">
+            {{person.name}} {{person.surname}}
         </div>
-        {{person.name}} {{person.surname}}
     </li>
 </ul>

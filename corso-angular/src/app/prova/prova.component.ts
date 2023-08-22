@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input, SimpleChanges } from '@angular/core';
 
 @Component({
   selector: 'app-prova',
@@ -6,38 +6,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./prova.component.css']
 })
 export class ProvaComponent {
+  @Input() people: any
 
-  // title = 'corso-angular'
+  ngOnInit() {
+    console.log(this.people)
+  }
 
-  // onClick(e: Event) {
-  //   this.title = 'ho cliccato!'
-  // }
-
-  // onInput(e: Event) {
-  //   this.title = (<HTMLInputElement>e.target).value
-  // }
-
-  // isVisible = true
-
-  people = [
-    {
-      name: 'Luca',
-      surname: 'Rossi',
-      isOnline: true
-    },
-    {
-      name: 'Mario',
-      surname: 'Bianchi',
-      isOnline: false
-    },
-    {
-      name: 'Franco',
-      surname: 'Verdi',
-      isOnline: false
-    }
-  ]
-
-  number = 3
-  string = 'brad'
+  ngOnChanges(changes: SimpleChanges): void {
+    console.log(changes)
+  }
 
 }
