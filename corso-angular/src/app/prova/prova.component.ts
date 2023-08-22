@@ -22,15 +22,18 @@ export class ProvaComponent {
   people = [
     {
       name: 'Luca',
-      surname: 'Rossi'
+      surname: 'Rossi',
+      isOnline: true
     },
     {
       name: 'Mario',
-      surname: 'Bianchi'
+      surname: 'Bianchi',
+      isOnline: false
     },
     {
       name: 'Franco',
-      surname: 'Verdi'
+      surname: 'Verdi',
+      isOnline: false
     }
   ]
 
