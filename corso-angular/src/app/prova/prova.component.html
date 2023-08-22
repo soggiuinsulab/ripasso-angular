@@ -27,7 +27,7 @@
 </ng-template> -->
 
 <ul>
-    <li *ngFor="let person of people; index as i">
-        {{i}} {{person.name}} {{person.surname}}
+    <li *ngFor="let person of people; index as i; last as isLast; even as isEven; odd as isOdd">
+        {{i}} {{isEven}}/{{isOdd}}{{person.name}} {{person.surname}} {{isLast}}
     </li>
 </ul>
