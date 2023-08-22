@@ -1,4 +1,4 @@
-<button mat-raised-button color="primary" (click)="onClick($event)">
+<!-- <button mat-raised-button color="primary" (click)="onClick($event)">
     Primary
 </button>
 
@@ -24,4 +24,10 @@
     <p>
         Non sono visibile
     </p>
-</ng-template>
+</ng-template> -->
+
+<ul>
+    <li *ngFor="let person of people; index as i">
+        {{i}} {{person.name}} {{person.surname}}
+    </li>
+</ul>

@@ -7,16 +7,31 @@ import { Component } from '@angular/core';
 })
 export class ProvaComponent {
 
-  title = 'corso-angular'
+  // title = 'corso-angular'
 
-  onClick(e: Event) {
-    this.title = 'ho cliccato!'
-  }
+  // onClick(e: Event) {
+  //   this.title = 'ho cliccato!'
+  // }
 
-  onInput(e: Event) {
-    this.title = (<HTMLInputElement>e.target).value
-  }
+  // onInput(e: Event) {
+  //   this.title = (<HTMLInputElement>e.target).value
+  // }
 
-  isVisible = true
+  // isVisible = true
+
+  people = [
+    {
+      name: 'Luca',
+      surname: 'Rossi'
+    },
+    {
+      name: 'Mario',
+      surname: 'Bianchi'
+    },
+    {
+      name: 'Franco',
+      surname: 'Verdi'
+    }
+  ]
 
 }
