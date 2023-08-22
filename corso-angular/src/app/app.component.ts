@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, ViewChild } from '@angular/core';
 
 @Component({
   selector: 'app-root',
@@ -6,53 +6,24 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+  @ViewChild('greetingsInput') greetingsInput!: ElementRef<HTMLInputElement>
+
   title = 'corso-angular';
 
-  handleReceiveData(value: string) {
-    console.log(value)
+  customValue = 'ciao'
+
+  ngOnInit(): void {
+    console.log('ngOnInit')
+    console.log(this.greetingsInput)
   }
 
-  people = [
-    {
-      name: 'Luca',
-      surname: 'Rossi',
-      isOnline: true,
-      color: 'blue'
-    },
-    {
-      name: 'Mario',
-      surname: 'Bianchi',
-      isOnline: false,
-      color: 'red'
-    },
-    {
-      name: 'Franco',
-      surname: 'Verdi',
-      isOnline: false,
-      color: 'green'
-    }
-  ]
-
+  ngAfterViewInit(): void {
+    console.log('ngAfterViewInit')
+    console.log(this.greetingsInput)
+  }
+  
   handleClick() {
-    this.people = [
-      {
-        name: 'Luca',
-        surname: 'sdad',
-        isOnline: true,
-        color: 'blue'
-      },
-      {
-        name: 'Mario',
-        surname: 'pefkpow',
-        isOnline: false,
-        color: 'red'
-      },
-      {
-        name: 'Franco',
-        surname: 'iefi',
-        isOnline: false,
-        color: 'green'
-      }
-    ]
+    console.log(this.greetingsInput.nativeElement.value)
   }
+
 }
