@@ -34,4 +34,7 @@ export class ProvaComponent {
     }
   ]
 
+  number = 3
+  string = 'brad'
+
 }

@@ -26,8 +26,38 @@
     </p>
 </ng-template> -->
 
-<ul>
-    <li *ngFor="let person of people; index as i; last as isLast; even as isEven; odd as isOdd">
-        {{i}} {{isEven}}/{{isOdd}}{{person.name}} {{person.surname}} {{isLast}}
-    </li>
-</ul>
+<div [ngSwitch]="number">
+    <p *ngSwitchCase="1">
+        one
+    </p>
+    <p *ngSwitchCase="2">
+        two
+    </p>
+    <p *ngSwitchCase="3">
+        three
+    </p>
+    <p *ngSwitchCase="4">
+        four
+    </p>
+    <p *ngSwitchDefault>
+        five
+    </p>
+</div>
+
+<div [ngSwitch]="string">
+    <p *ngSwitchCase="'john'">
+        john
+    </p>
+    <p *ngSwitchCase="'brad'">
+        brad
+    </p>
+    <p *ngSwitchCase="'alan'">
+        alan
+    </p>
+    <p *ngSwitchCase="'mary'">
+        mary
+    </p>
+    <p *ngSwitchDefault>
+        steve
+    </p>
+</div>
