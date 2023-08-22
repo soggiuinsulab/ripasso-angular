@@ -8,6 +8,10 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'corso-angular';
 
+  handleReceiveData(value: string) {
+    console.log(value)
+  }
+
   people = [
     {
       name: 'Luca',

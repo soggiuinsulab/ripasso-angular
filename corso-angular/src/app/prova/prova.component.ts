@@ -1,4 +1,4 @@
-import { Component, Input, SimpleChanges } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-prova',
@@ -6,14 +6,10 @@ import { Component, Input, SimpleChanges } from '@angular/core';
   styleUrls: ['./prova.component.css']
 })
 export class ProvaComponent {
-  @Input() people: any
+  @Output() sendEventData = new EventEmitter<string>()
+  name = 'Luca'
 
-  ngOnInit() {
-    console.log(this.people)
+  handleSendData() {
+    this.sendEventData.emit(this.name)
   }
-
-  ngOnChanges(changes: SimpleChanges): void {
-    console.log(changes)
-  }
-
 }
