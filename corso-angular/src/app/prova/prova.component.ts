@@ -1,4 +1,5 @@
 import { Component, Output, EventEmitter } from '@angular/core';
+import { TestServiceService } from '../services/test-service.service';
 
 @Component({
   selector: 'app-prova',
@@ -6,10 +7,11 @@ import { Component, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./prova.component.css']
 })
 export class ProvaComponent {
-  @Output() sendEventData = new EventEmitter<string>()
-  name = 'Luca'
 
-  handleSendData() {
-    this.sendEventData.emit(this.name)
+  constructor(private testService: TestServiceService) {}
+
+  ngOnInit() {
+    console.log('from prova component', this.testService.people)
   }
+  
 }
