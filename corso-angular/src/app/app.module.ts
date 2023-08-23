@@ -12,11 +12,15 @@ import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
 import { MatCardModule } from '@angular/material/card';
 import { MatInputModule } from '@angular/material/input';
+import { HighlightDirective } from './directives/highlight.directive';
+import { UnderlineDirective } from './directives/underline.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
-    ProvaComponent
+    ProvaComponent,
+    HighlightDirective,
+    UnderlineDirective
   ],
   imports: [
     BrowserModule,

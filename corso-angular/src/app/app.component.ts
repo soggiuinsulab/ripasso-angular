@@ -6,24 +6,11 @@ import { Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  @ViewChild('greetingsInput') greetingsInput!: ElementRef<HTMLInputElement>
+  title = 'corso-angular'
 
-  title = 'corso-angular';
+  today = Date.now()
 
-  customValue = 'ciao'
-
-  ngOnInit(): void {
-    console.log('ngOnInit')
-    console.log(this.greetingsInput)
-  }
-
-  ngAfterViewInit(): void {
-    console.log('ngAfterViewInit')
-    console.log(this.greetingsInput)
-  }
-  
-  handleClick() {
-    console.log(this.greetingsInput.nativeElement.value)
-  }
-
+  integerNumber = 5
+  floatNumber = 5.234394868
+  percentExampleNumber = 0.05
 }

@@ -1,2 +1,31 @@
-<input #greetingsInput [value]="'ciao'">
-<button (click)="handleClick()">Click</button>
+<h2>Case</h2>
+<p>{{title | uppercase}}</p>
+<p>{{title | lowercase}}</p>
+
+<h2>Date</h2>
+<p>{{today}}</p>
+<p>{{today | date}}</p>
+<p>{{today | date:'short'}}</p>
+<p>{{today | date:'medium'}}</p>
+<p>{{today | date:'long'}}</p>
+<p>{{today | date:'dd/MM/yy - hh:mm:ss'}}</p>
+<p>{{today | date:'d MMM yy - h:mm:ss'}}</p>
+
+<h2>Number</h2>
+<p>{{integerNumber | number}}</p>
+<p>{{integerNumber | number:'1.2-4'}}</p>
+<p>{{integerNumber | number:'2.2-4'}}</p>
+<p>{{integerNumber | number:'1.1-4'}}</p>
+<p>{{floatNumber | number:'1.1-4'}}</p>
+
+<p>Percent</p>
+<p>{{integerNumber | percent:'1.2-4'}}</p>
+<p>{{percentExampleNumber | percent:'1.0-4'}}</p>
+
+<h2>Currency</h2>
+<p>{{integerNumber | currency}}</p>
+<p>{{integerNumber | currency:'EUR'}}</p>
+<p>{{integerNumber | currency:'EUR':'code'}}</p>
+<p>{{integerNumber | currency:'EUR':'symbol'}}</p>
+<p>{{integerNumber | currency:'EUR':'symbol-narrow'}}</p>
+<p>{{integerNumber | currency:'EUR':'symbol':'2.3-5'}}</p>
