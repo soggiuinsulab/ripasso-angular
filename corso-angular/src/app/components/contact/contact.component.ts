@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, ParamMap } from '@angular/router';
 import { PeopleService } from 'src/app/services/people.service';
 
 @Component({
@@ -13,6 +13,9 @@ export class ContactComponent {
   constructor(private peopleService: PeopleService, private route: ActivatedRoute) {}
     
   ngOnInit() {
-    this.person = this.peopleService.getPerson(parseInt(this.route.snapshot.paramMap.get('id')!))
+    this.route.paramMap.subscribe((params: ParamMap) => {
+      this.personId = +params.get('id')!
+      this.person = this.peopleService.getPerson(this.personId)
+    })
   }
 }

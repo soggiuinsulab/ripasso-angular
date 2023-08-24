@@ -1,5 +1,6 @@
-<p *ngFor="let person of people; let i = index">
-    <a routerLink="/contacts/{{i}}">
+<p *ngFor="let person of people">
+    <a routerLink="/contacts/{{person.id}}">
         {{person.name}} {{person.surname}}
     </a>
 </p>
+<router-outlet></router-outlet>
