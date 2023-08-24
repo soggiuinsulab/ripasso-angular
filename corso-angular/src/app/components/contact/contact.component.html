@@ -1,1 +1,7 @@
-<p>contact works!</p>
+<p *ngIf="person; then profile else unavailableProfile"></p>
+<ng-template #profile>
+    Ciao, {{person.name}}
+</ng-template>
+<ng-template #unavailableProfile>
+    unavailable profile
+</ng-template>
