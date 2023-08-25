@@ -1,21 +1,24 @@
-<form #homeform="ngForm" (ngSubmit)="handleSubmit(homeform)" class="flex-col">
+<form [formGroup]="homeform" (ngSubmit)="handleSubmit(homeform)" class="flex-col">
     <mat-form-field>
         <mat-label>
             Name
         </mat-label>
-        <input matInput type="text" name="name" ngModel required>
+        <input matInput type="text" name="name" formControlName="name" required>
     </mat-form-field>
+    <p *ngIf="!homeform.get('name')?.valid && homeform.get('name')?.touched">
+        Inserisci un nome
+    </p>
     <mat-form-field>
         <mat-label>
             Email
         </mat-label>
-        <input matInput type="email" name="email" ngModel required email>
+        <input matInput type="email" name="email" formControlName="email" required email>
     </mat-form-field>
     <mat-form-field>
         <mat-label>
             Select
         </mat-label>
-        <mat-select name="option" ngModel>
+        <mat-select name="option" formControlName="option">
             <mat-option value="one">First option</mat-option>
             <mat-option value="two">Second option</mat-option>
         </mat-select>

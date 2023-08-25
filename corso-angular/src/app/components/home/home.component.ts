@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-home',
@@ -7,7 +7,18 @@ import { NgForm } from '@angular/forms';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent {
-  handleSubmit(form: NgForm) {
+  homeform!: FormGroup
+  constructor() {}
+  ngOnInit() {
+    this.homeform = new FormGroup({
+      name: new FormControl(null, Validators.required),
+      email: new FormControl(null, [Validators.required, Validators.email]),
+      option: new FormControl()
+    })
+  }
+
+  handleSubmit(form: FormGroup) {
     console.log(form)
   }
+
 }
