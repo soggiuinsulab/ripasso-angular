@@ -1,0 +1,13 @@
+.flex-col {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+}
+
+input.ng-invalid.ng-touched {
+    border: red 2px solid;
+}
+
+input.ng-valid {
+    border: green 2px solid;
+}
